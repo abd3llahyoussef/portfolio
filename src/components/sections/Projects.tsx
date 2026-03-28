@@ -92,9 +92,6 @@ export function Projects() {
                 <a href={project.github} className="p-2 glass hover:bg-white/10 rounded-lg transition-colors" title="GitHub">
                   <FaGithub size={20} />
                 </a>
-                <a href={project.live} className="p-2 glass hover:bg-white/10 rounded-lg transition-colors" title="Live Demo">
-                  <ExternalLink size={20} />
-                </a>
                 <button
                   onClick={() => openProject(project)}
                   className="ml-auto text-sm font-semibold flex items-center gap-1 text-white/50 group-hover:text-white transition-colors"
