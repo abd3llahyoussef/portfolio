@@ -22,7 +22,8 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiNestjs,
-  SiTypescript
+  SiTypescript,
+  SiPrisma
 } from "react-icons/si";
 
 const skills = {
@@ -43,6 +44,7 @@ const skills = {
     { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
     { name: "Redis", icon: SiRedis, color: "text-red-400" },
+    { name: "Prisma", icon: SiPrisma, color: "text-blue-500" }
   ],
 };
 

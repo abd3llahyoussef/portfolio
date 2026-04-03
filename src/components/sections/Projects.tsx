@@ -25,6 +25,15 @@ const projects = [
     live: "#",
     videoUrl: "https://youtu.be/YbKSs9u2xqg",
     image: "https://img.youtube.com/vi/YbKSs9u2xqg/maxresdefault.jpg"
+  },
+  {
+    title: "Query Builder App",
+    description: "A full-stack query builder application featuring query building via AI, JWT-secured authentication, and persistent storage with postgresql with Prisma.",
+    tags: ["Next.js", "Nest.js", "PostgreSQL", "Prisma", "JWT"],
+    github: "https://github.com/abd3llahyoussef",
+    live: "#",
+    videoUrl: "https://youtu.be/w5YgHiIQQWI",
+    image: "https://img.youtube.com/vi/w5YgHiIQQWI/maxresdefault.jpg"
   }
 ];
 

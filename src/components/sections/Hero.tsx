@@ -24,8 +24,8 @@ export function Hero() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0.33, 1, 0.68, 1]
-      }
+        ease: [0.33, 1, 0.68, 1],
+      },
     },
   };
 
@@ -63,7 +63,10 @@ export function Hero() {
           <span className="text-foreground"> React, Next.js, and NestJS</span>.
         </motion.p>
 
-        <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
+        <motion.div
+          variants={item}
+          className="flex flex-wrap justify-center gap-4"
+        >
           <a
             href="#projects"
             className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold flex items-center gap-2 glow-sm hover:glow-md transition-all duration-300"
@@ -87,7 +90,7 @@ export function Hero() {
             <FaLinkedin size={20} /> LinkedIn
           </a>
           <a
-            href="https://drive.google.com/file/d/1YUVPZAQ287BFvvCvgs5D-r-5xjXt8vGN/view?usp=sharing"
+            href="https://drive.google.com/file/d/1MyAGxXakyYENLJOVX1IurHnDYV8l6PJP/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 glass text-foreground rounded-full font-semibold flex items-center gap-2 hover:bg-white/10 transition-all duration-300"
