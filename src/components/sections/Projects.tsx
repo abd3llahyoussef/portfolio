@@ -14,8 +14,8 @@ const projects = [
     tags: ["React", "Express", "PostgreSQL", "Passport.js", "JWT"],
     github: "https://github.com/abd3llahyoussef",
     live: "#",
-    videoUrl: "https://youtu.be/MpNj1Eq-jCk",
-    image: "https://img.youtube.com/vi/MpNj1Eq-jCk/maxresdefault.jpg"
+    videoUrl: "https://youtu.be/G_ORIVZm8mE",
+    image: "https://img.youtube.com/vi/G_ORIVZm8mE/maxresdefault.jpg"
   },
   {
     title: "Real-time Chat App",

@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFile } from "react-icons/fa6";
@@ -90,7 +89,7 @@ export function Hero() {
             <FaLinkedin size={20} /> LinkedIn
           </a>
           <a
-            href="https://drive.google.com/file/d/1MyAGxXakyYENLJOVX1IurHnDYV8l6PJP/view?usp=sharing"
+            href="https://drive.google.com/file/d/1rul2pWob9ENZyuv1DG6ekArGsfcs1KC2/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 glass text-foreground rounded-full font-semibold flex items-center gap-2 hover:bg-white/10 transition-all duration-300"
