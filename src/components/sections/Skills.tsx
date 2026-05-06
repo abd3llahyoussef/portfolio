@@ -2,20 +2,20 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { 
-  Code2, 
-  Layers, 
-  Layout, 
-  Server, 
+import {
+  Code2,
+  Layers,
+  Layout,
+  Server,
   Terminal,
   Cpu,
   Globe,
   Database
 } from "lucide-react";
-import { 
-  SiRedux, 
-  SiPostgresql, 
-  SiMongodb, 
+import {
+  SiRedux,
+  SiPostgresql,
+  SiMongodb,
   SiRedis,
   SiReact,
   SiNextdotjs,
@@ -23,7 +23,8 @@ import {
   SiNodedotjs,
   SiNestjs,
   SiTypescript,
-  SiPrisma
+  SiPrisma,
+  SiDocker
 } from "react-icons/si";
 
 const skills = {
@@ -44,7 +45,8 @@ const skills = {
     { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
     { name: "Redis", icon: SiRedis, color: "text-red-400" },
-    { name: "Prisma", icon: SiPrisma, color: "text-blue-500" }
+    { name: "Prisma", icon: SiPrisma, color: "text-blue-500" },
+    { name: "Docker", icon: SiDocker, color: "text-blue-500" }
   ],
 };
 
@@ -66,7 +68,7 @@ export function Skills() {
             </div>
             <h3 className="text-2xl font-bold">Frontend Development</h3>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {skills.frontend.map((skill) => (
               <motion.div
@@ -88,7 +90,7 @@ export function Skills() {
             </div>
             <h3 className="text-2xl font-bold">Backend Development</h3>
           </div>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {skills.backend.map((skill) => (
               <motion.div

@@ -34,6 +34,15 @@ const projects = [
     live: "#",
     videoUrl: "https://youtu.be/w5YgHiIQQWI",
     image: "https://img.youtube.com/vi/w5YgHiIQQWI/maxresdefault.jpg"
+  },
+  {
+    title: "Flight Reservation System",
+    description: "A full-stack flight reservation system featuring authentication, booking, and management of flights using React.js, Nest.js, PostgreSQL, and JWT.",
+    tags: ["React.js", "Nest.js", "PostgreSQL", "Prisma", "JWT", "OAuth"],
+    github: "https://github.com/abd3llahyoussef",
+    live: "#",
+    videoUrl: "https://youtu.be/xQcL2c71NqM",
+    image: "https://img.youtube.com/vi/xQcL2c71NqM/maxresdefault.jpg"
   }
 ];
 
