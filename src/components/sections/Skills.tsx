@@ -26,6 +26,7 @@ import {
   SiPrisma,
   SiDocker
 } from "react-icons/si";
+import { FaGitAlt, FaAws } from "react-icons/fa";
 
 const skills = {
   frontend: [
@@ -37,6 +38,7 @@ const skills = {
     { name: "ReactJS", icon: SiReact, color: "text-sky-400" },
     { name: "NextJS", icon: SiNextdotjs, color: "text-white" },
     { name: "Redux Toolkit", icon: SiRedux, color: "text-purple-500" },
+    { name: "AWS", icon: FaAws, color: "text-orange-500" },
   ],
   backend: [
     { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
@@ -46,7 +48,8 @@ const skills = {
     { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
     { name: "Redis", icon: SiRedis, color: "text-red-400" },
     { name: "Prisma", icon: SiPrisma, color: "text-blue-500" },
-    { name: "Docker", icon: SiDocker, color: "text-blue-500" }
+    { name: "Docker", icon: SiDocker, color: "text-blue-500" },
+    { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
   ],
 };
 
