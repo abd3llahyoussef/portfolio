@@ -36,13 +36,14 @@ const projects = [
     image: "https://img.youtube.com/vi/w5YgHiIQQWI/maxresdefault.jpg"
   },
   {
-    title: "Flight Reservation System",
-    description: "A full-stack flight reservation system featuring authentication, booking, and management of flights using React.js, Nest.js, PostgreSQL, and JWT.",
-    tags: ["React.js", "Nest.js", "PostgreSQL", "Prisma", "JWT", "OAuth"],
-    github: "https://github.com/abd3llahyoussef",
-    live: "#",
+    title: "Aerway — Flight Reservation",
+    description: "A professional-grade flight booking platform featuring seat selection, dependent management, and passport validation. Built with a focus on real-world business logic and seamless UX.",
+    tags: ["React.js", "Nest.js", "PostgreSQL", "Prisma", "Docker", "AWS"],
+    github: "https://github.com/abd3llahyoussef/Flight-Booking-System",
+    live: "http://13.48.137.114:5173",
     videoUrl: "https://youtu.be/xQcL2c71NqM",
-    image: "https://img.youtube.com/vi/xQcL2c71NqM/maxresdefault.jpg"
+    image: "https://img.youtube.com/vi/xQcL2c71NqM/maxresdefault.jpg",
+    isLive: true
   }
 ];
 
@@ -77,11 +78,13 @@ export function Projects() {
             onClick={() => openProject(project)}
           >
             <div className="relative h-48 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </a>
               <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay" />
               {project.videoUrl && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -91,7 +94,6 @@ export function Projects() {
                 </div>
               )}
             </div>
-
             <div className="p-6 flex-grow flex flex-col">
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map(tag => (
@@ -99,6 +101,12 @@ export function Projects() {
                     {tag}
                   </span>
                 ))}
+                {(project as any).isLive && (
+                  <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Live
+                  </span>
+                )}
               </div>
 
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>

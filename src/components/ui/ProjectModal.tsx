@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink } from "lucide-react";
+import { X, ExternalLink, Globe, Play, Image as ImageIcon } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { BrowserPreview } from "./BrowserPreview";
 
 interface Project {
   title: string;
@@ -13,6 +14,7 @@ interface Project {
   live?: string;
   videoUrl?: string;
   image?: string;
+  isLive?: boolean;
 }
 
 interface ProjectModalProps {
@@ -22,6 +24,13 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+  const [viewMode, setViewMode] = useState<"media" | "live">("media");
+
+  // Reset view mode when project changes or modal opens
+  useEffect(() => {
+    if (isOpen) setViewMode("media");
+  }, [isOpen, project]);
+
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
@@ -82,8 +91,12 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
             <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
               {/* Video/Image Section */}
-              <div className="lg:w-3/5 bg-black/40 flex items-center justify-center aspect-video lg:aspect-auto">
-                {videoId ? (
+              <div className="lg:w-3/5 bg-black/40 flex items-center justify-center aspect-video lg:aspect-auto overflow-hidden">
+                {viewMode === "live" && project.live ? (
+                  <div className="w-full h-full p-4">
+                    <BrowserPreview url={project.live} title={project.title} />
+                  </div>
+                ) : videoId ? (
                   <iframe
                     className="w-full h-full"
                     src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
@@ -114,6 +127,23 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 </p>
 
                 <div className="mt-auto space-y-4 pt-6 border-t border-white/5">
+                  {project.isLive && (
+                    <div className="flex p-1 bg-white/5 rounded-xl border border-white/5 mb-4">
+                      <button
+                        onClick={() => setViewMode("media")}
+                        className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-semibold transition-all ${viewMode === "media" ? "bg-white/10 text-white shadow-lg" : "text-white/40 hover:text-white/60"}`}
+                      >
+                        {videoId ? <Play size={16} /> : <ImageIcon size={16} />} Media
+                      </button>
+                      <button
+                        onClick={() => setViewMode("live")}
+                        className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-semibold transition-all ${viewMode === "live" ? "bg-blue-500/20 text-blue-400 shadow-lg border border-blue-500/20" : "text-white/40 hover:text-white/60"}`}
+                      >
+                        <Globe size={16} /> Live Demo
+                      </button>
+                    </div>
+                  )}
+
                   <div className="flex items-center gap-4">
                     {project.github && (
                       <a
@@ -123,6 +153,17 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         className="flex-1 flex items-center justify-center gap-2 px-6 py-3 glass hover:bg-white/10 rounded-xl font-semibold transition-all"
                       >
                         <FaGithub size={20} /> GitHub
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 glass hover:bg-white/10 rounded-xl transition-all text-blue-400"
+                        title="Open in new tab"
+                      >
+                        <ExternalLink size={20} />
                       </a>
                     )}
                   </div>
