@@ -59,7 +59,7 @@ export function Hero() {
           className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
           Crafting high-performance web applications & real-time Industrial IoT solutions with
-          <span className="text-foreground"> React, Next.js, Node.js, and IIoT Protocols</span>.
+          <span className="text-foreground"> React, Next.js, Node.js, and IoT Protocols</span>.
         </motion.p>
 
         <motion.div
