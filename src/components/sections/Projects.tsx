@@ -9,6 +9,33 @@ import { ProjectModal } from "@/components/ui/ProjectModal";
 
 const projects = [
   {
+    title: "AmbientHome",
+    description: "End-to-end IoT home climate monitoring system. ESP8266 & DHT11 sensors collect temperature (°C/°F) and humidity data, transmitting over BearSSL TLS-encrypted MQTT (HiveMQ Cloud) to a Node.js/PostgreSQL backend with real-time WebSocket streaming and interactive Chart.js visualization.",
+    tags: ["React 19", "Node.js", "TypeScript", "ESP8266", "MQTT (TLS)", "WebSockets", "PostgreSQL", "Chart.js"],
+    github: "https://github.com/abd3llahyoussef",
+    live: "#",
+    videoUrl: "https://youtu.be/FYobw3x6B1s",
+    image: "https://img.youtube.com/vi/FYobw3x6B1s/maxresdefault.jpg"
+  },
+  {
+    title: "IoT Motor Health & Safety System",
+    description: "Industrial IoT (IIoT) equipment monitoring & sensor fusion system using a two-tier MCU architecture (Arduino + ESP8266 over UART). Tracks machine condition (vibration & bearing wear), projects Remaining Useful Life (RUL), and triggers zero-latency safety alerts for flame hazards over BearSSL TLS MQTT, WebSockets, and a React HMI dashboard.",
+    tags: ["Arduino", "ESP8266", "Sensor Fusion", "MQTT (TLS)", "WebSockets", "Node.js", "PostgreSQL", "React"],
+    github: "https://github.com/abd3llahyoussef",
+    live: "#",
+    videoUrl: "https://youtu.be/zrR7fuka7OA",
+    image: "https://img.youtube.com/vi/zrR7fuka7OA/maxresdefault.jpg"
+  },
+  {
+    title: "Modbus TCP & MQTT Industrial Dashboard",
+    description: "Industrial-grade real-time monitoring and control dashboard bridging Modbus TCP field devices (PLCs, Arduino, ESP32) with web applications & MQTT brokers. Supports holding register/coil read & write, dynamic auto-polling, real-time WebSocket events, and multi-format (Hex/Dec/Binary) data displays.",
+    tags: ["Modbus TCP", "MQTT", "WebSockets", "Node.js", "Express", "TypeScript", "React 19", "Vite"],
+    github: "https://github.com/abd3llahyoussef/Modbus-Integration",
+    live: "#",
+    videoUrl: "https://youtu.be/sRb1eCZUwA0",
+    image: "https://img.youtube.com/vi/sRb1eCZUwA0/maxresdefault.jpg"
+  },
+  {
     title: "Furniture E-Commerce",
     description: "A comprehensive full-stack e-commerce platform for high-end furniture. Features Google OAuth, RESTful APIs, session-based cart management, and a robust admin dashboard.",
     tags: ["React", "Express", "PostgreSQL", "Passport.js", "JWT"],
@@ -39,11 +66,10 @@ const projects = [
     title: "Aerway — Flight Reservation",
     description: "A professional-grade flight booking platform featuring seat selection, dependent management, and passport validation. Built with a focus on real-world business logic and seamless UX.",
     tags: ["React.js", "Nest.js", "PostgreSQL", "Prisma", "Docker", "AWS"],
-    github: "https://github.com/abd3llahyoussef/Flight-Booking-System",
-    live: "http://13.48.137.114:5173",
+    github: "https://github.com/abd3llahyoussef",
+    live: "#",
     videoUrl: "https://youtu.be/xQcL2c71NqM",
-    image: "https://img.youtube.com/vi/xQcL2c71NqM/maxresdefault.jpg",
-    isLive: true
+    image: "https://img.youtube.com/vi/xQcL2c71NqM/maxresdefault.jpg"
   }
 ];
 
