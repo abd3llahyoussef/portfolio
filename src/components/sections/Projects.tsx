@@ -9,6 +9,14 @@ import { ProjectModal } from "@/components/ui/ProjectModal";
 
 const projects = [
   {
+    title: "TIA Portal Hydroelectric Plant Simulation",
+    description: "Full simulation of a hydroelectric power plant using Siemens TIA Portal. The project includes automation logic, monitoring, and control of plant components.",
+    tags: ["Siemens TIA Portal", "WinCC Runtime", "S7-1500", "STL", "SCL", "Ladder Logic", "FBD"],
+    github: "https://github.com/abd3llahyoussef/TIA-Portal-Hydroelectric-Plant-Simulation",
+    live: "#",
+    videoUrl: "https://youtu.be/tbl-I0S4duo",
+    image: "https://img.youtube.com/vi/tbl-I0S4duo/maxresdefault.jpg"
+  }, {
     title: "AmbientHome",
     description: "End-to-end IoT home climate monitoring system. ESP8266 & DHT11 sensors collect temperature (°C/°F) and humidity data, transmitting over BearSSL TLS-encrypted MQTT (HiveMQ Cloud) to a Node.js/PostgreSQL backend with real-time WebSocket streaming and interactive Chart.js visualization.",
     tags: ["React 19", "Node.js", "TypeScript", "ESP8266", "MQTT (TLS)", "WebSockets", "PostgreSQL", "Chart.js"],
