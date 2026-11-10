@@ -44,7 +44,7 @@ export function Hero() {
           variants={item}
           className="inline-block px-4 py-1.5 mb-6 rounded-full glass border-blue-500/20 text-blue-400 text-sm font-medium tracking-wide uppercase"
         >
-          Full Stack & IoT Developer
+          Automation and Control Systems Engineer
         </motion.div>
 
         <motion.h1
@@ -58,8 +58,8 @@ export function Hero() {
           variants={item}
           className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Crafting high-performance web applications & real-time Industrial IoT solutions with
-          <span className="text-foreground"> React, Next.js, Node.js, and IoT Protocols</span>.
+          Crafting high-performance automation and control systems solutions with
+          <span className="text-foreground"> Siemens TIA Portal, WinCC Runtime, S7-1500, STL, SCL, Ladder Logic, FBD</span>.
         </motion.p>
 
         <motion.div
